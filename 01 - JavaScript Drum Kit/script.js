@@ -8,3 +8,9 @@ window.addEventListener('keydown', function(e) {
     key.classList.add('playing');
 });
 
+window.addEventListener('keyup', function(e) {
+    const key =  document.querySelector(`.key[data-key=${e.key}]`);
+    if(!key) return;
+    key.classList.remove('playing');
+})
+
